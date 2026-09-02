@@ -1,7 +1,7 @@
 bl_info = {
     "name": "HD2 Mass LUT / Texture ID Swap",
     "author": "Uskummel",
-    "version": (1, 2, 5),
+    "version": (1, 1, 0),
     "blender": (4, 0, 0),
     "location": "View3D > Sidebar > ID_Swap",
     "description": "Apply preset or per-slot custom Armor/Helmet LUTs across many archives",
@@ -319,6 +319,12 @@ def custom_slot_props(mode):
     return "hd2_lut_armor_custom_slots", "hd2_lut_armor_custom_slot_index"
 
 
+def custom_overall_slot_props(mode):
+    if mode == "HELMET":
+        return "hd2_lut_helmet_custom_overall_slots", "hd2_lut_helmet_custom_overall_slot_index"
+    return "hd2_lut_armor_custom_overall_slots", "hd2_lut_armor_custom_overall_slot_index"
+
+
 def custom_group_props(mode, body_mode):
     prefix = "helmet" if mode == "HELMET" else "armor"
     suffix = "overall_groups" if body_mode == "OVERALL" else "body_groups"
@@ -356,6 +362,11 @@ def active_custom_slots(scene, mode=None):
     return getattr(scene, custom_slot_props(mode)[0])
 
 
+def active_custom_overall_slots(scene, mode=None):
+    mode = mode or active_mode(scene)
+    return getattr(scene, custom_overall_slot_props(mode)[0])
+
+
 def active_custom_groups(scene, mode, body_mode=None):
     body_mode = body_mode or scene.hd2_lut_custom_body_mode
     return getattr(scene, custom_group_props(mode, body_mode))
@@ -380,6 +391,73 @@ def source_slot_key(item):
         str(item.layer).lower(),
         int(item.ordinal),
     )
+
+
+def overall_slot_key(item):
+    return str(item.region).lower(), str(item.layer).lower(), int(item.ordinal)
+
+
+def overall_key_for_source_key(key):
+    _, region, layer, ordinal = key
+    return region, layer, ordinal
+
+
+def format_overall_slot_label(key):
+    region, layer, ordinal = key
+    region_label = "Hip" if region == "hips" else region.replace("_", " ").title()
+    layer_label = "Accessories" if layer == "accessory" else layer.replace("_", " ").title()
+    suffix = "" if ordinal == 0 else f" #{ordinal + 1}"
+    return f"{region_label} {layer_label}{suffix}"
+
+
+PROMOTED_OVERALL_SLOTS = {
+    ("hips", "accessory"),
+    ("hips", "armor"),
+    ("hips", "undergarment"),
+    ("torso", "accessory"),
+    ("torso", "armor"),
+    ("torso", "undergarment"),
+    ("left_arm", "armor"),
+    ("left_arm", "undergarment"),
+    ("right_arm", "armor"),
+    ("right_arm", "undergarment"),
+}
+
+
+def overall_slot_is_promoted(key):
+    region, layer, _ = key
+    return (region, layer) in PROMOTED_OVERALL_SLOTS
+
+
+def overall_parent_region(region):
+    region = str(region).lower()
+    for side in ("left_", "right_"):
+        if region.startswith(side):
+            paired_region = region[len(side):]
+            if paired_region in {"shoulder", "arm", "leg"}:
+                return paired_region
+    return region
+
+
+OVERALL_REGION_ORDER = {
+    "helmet": 0,
+    "torso": 1,
+    "hips": 2,
+    "cape": 3,
+    "shoulder": 10,
+    "arm": 11,
+    "leg": 12,
+}
+
+
+def overall_region_sort_key(region):
+    region = str(region).lower()
+    return OVERALL_REGION_ORDER.get(region, 4), region
+
+
+def overall_region_section(region):
+    region = str(region).lower()
+    return "paired" if region in {"shoulder", "arm", "leg"} else "center"
 
 
 def custom_group_key(item):
@@ -441,24 +519,88 @@ def ensure_custom_slots(scene, mode):
             item.dds_path, item.dds_id, item.enabled = prior
 
 
+def ensure_custom_overall_slots(scene, mode):
+    """Create one logical child slot shared by Brawny, Lean and Any bodies."""
+    concrete_keys, _ = custom_slot_catalog(mode)
+    expected = tuple(sorted({overall_key_for_source_key(key) for key in concrete_keys}))
+    slots = active_custom_overall_slots(scene, mode)
+    if {overall_slot_key(item) for item in slots} == set(expected) and len(slots) == len(expected):
+        legacy_groups = {
+            str(group.region).lower(): (str(group.dds_path), str(group.dds_id), bool(group.enabled))
+            for group in active_custom_groups(scene, mode, "OVERALL")
+            if str(group.dds_path).strip()
+        }
+        for item in slots:
+            key = overall_slot_key(item)
+            item.label = format_overall_slot_label(key)
+            legacy_group = legacy_groups.get(key[0]) or legacy_groups.get(overall_parent_region(key[0]))
+            if not str(item.dds_path).strip() and legacy_group:
+                item.dds_path, item.dds_id, item.enabled = legacy_group
+        return
+
+    previous = {
+        overall_slot_key(item): (str(item.dds_path), str(item.dds_id), bool(item.enabled))
+        for item in slots
+    }
+    legacy = {}
+    for item in active_custom_slots(scene, mode):
+        path = str(item.dds_path).strip()
+        if path:
+            legacy.setdefault(overall_key_for_source_key(source_slot_key(item)), []).append(
+                (path, str(item.dds_id), bool(item.enabled))
+            )
+    legacy_groups = {
+        str(group.region).lower(): (str(group.dds_path), str(group.dds_id), bool(group.enabled))
+        for group in active_custom_groups(scene, mode, "OVERALL")
+        if str(group.dds_path).strip()
+    }
+    slots.clear()
+    for key in expected:
+        region, layer, ordinal = key
+        item = slots.add()
+        item.body = "overall"
+        item.region = region
+        item.layer = layer
+        item.ordinal = ordinal
+        item.label = format_overall_slot_label(key)
+        item.enabled = True
+        prior = previous.get(key)
+        if prior:
+            item.dds_path, item.dds_id, item.enabled = prior
+        else:
+            candidates = legacy.get(key, ())
+            if candidates and len({candidate[0] for candidate in candidates}) == 1:
+                item.dds_path, item.dds_id, item.enabled = candidates[0]
+            else:
+                legacy_group = legacy_groups.get(region) or legacy_groups.get(overall_parent_region(region))
+                if legacy_group:
+                    item.dds_path, item.dds_id, item.enabled = legacy_group
+
+
 def group_key_for_slot(key, body_mode):
     body, region, _, _ = key
-    return ("overall", region) if body_mode == "OVERALL" else (body, region)
+    return ("overall", overall_parent_region(region)) if body_mode == "OVERALL" else (body, region)
 
 
 def format_custom_group_key(key):
     body, region = key
     if body == "overall":
-        return f"{region.replace('_', ' ').title()}  (Overall)"
+        return region.replace('_', ' ').title()
     return f"{body.replace('_', ' ').title()} / {region.replace('_', ' ').title()}"
 
 
 def ensure_custom_groups(scene, mode, body_mode):
     """Create stable group controls while preserving the user's DDS choices."""
     keys, _ = custom_slot_catalog(mode)
-    expected = tuple(sorted({group_key_for_slot(key, body_mode) for key in keys}))
+    expected_set = {group_key_for_slot(key, body_mode) for key in keys}
+    if body_mode == "OVERALL":
+        expected = tuple(sorted(expected_set, key=lambda key: overall_region_sort_key(key[1])))
+    else:
+        expected = tuple(sorted(expected_set))
     groups = active_custom_groups(scene, mode, body_mode)
-    if {custom_group_key(item) for item in groups} == set(expected) and len(groups) == len(expected):
+    if tuple(custom_group_key(item) for item in groups) == expected:
+        for item in groups:
+            item.label = format_custom_group_key(custom_group_key(item))
         return
     previous = {
         custom_group_key(item): (str(item.dds_path), str(item.dds_id), bool(item.enabled), bool(item.expanded))
@@ -477,6 +619,7 @@ def ensure_custom_groups(scene, mode, body_mode):
 
 def ensure_custom_presets(scene, mode):
     ensure_custom_slots(scene, mode)
+    ensure_custom_overall_slots(scene, mode)
     ensure_custom_groups(scene, mode, "OVERALL")
     ensure_custom_groups(scene, mode, "BODY")
 
@@ -832,6 +975,35 @@ def build_custom_slot_sources(sdk, scene, mode):
             loaded_owners[owner_key] = loaded
             texture_entries[texture_id] = entry
         return loaded
+
+    if body_mode == "OVERALL":
+        logical_sources = {}
+        logical_labels = {}
+        for slot_index, slot in enumerate(active_custom_overall_slots(scene, mode)):
+            if not slot.enabled:
+                continue
+            logical_key = overall_slot_key(slot)
+            if str(slot.dds_path).strip():
+                texture_id, _, filename = load_owner(("overall_slot", slot_index), slot)
+            elif not overall_slot_is_promoted(logical_key):
+                group_index, group = group_by_key[("overall", overall_parent_region(logical_key[0]))]
+                if not group.enabled or not str(group.dds_path).strip():
+                    continue
+                texture_id, _, filename = load_owner(("group", group_index), group)
+            else:
+                continue
+            logical_sources[logical_key] = texture_id
+            logical_labels[logical_key] = filename
+
+        concrete_keys, _ = custom_slot_catalog(mode)
+        for slot_key in concrete_keys:
+            logical_key = overall_key_for_source_key(slot_key)
+            texture_id = logical_sources.get(logical_key)
+            if texture_id is None:
+                continue
+            sources[slot_key] = texture_id
+            source_labels[slot_key] = logical_labels[logical_key]
+        return sources, texture_entries, source_labels
 
     for slot_index, slot in enumerate(active_custom_slots(scene, mode)):
         if not slot.enabled:
@@ -1587,6 +1759,8 @@ class HD2LUT_OT_SelectDDS(Operator, ImportHelper):
         mode = self.mode or active_mode(context.scene)
         if self.target_kind == "GROUP":
             items = active_custom_groups(context.scene, mode)
+        elif self.target_kind == "OVERALL_SLOT":
+            items = active_custom_overall_slots(context.scene, mode)
         else:
             items = active_custom_slots(context.scene, mode)
         if not 0 <= self.slot_index < len(items):
@@ -1719,44 +1893,113 @@ class HD2LUT_PT_MainPanel(Panel):
         if is_dds_source(scene, mode):
             body_mode = scene.hd2_lut_custom_body_mode
             source_box.prop(scene, "hd2_lut_custom_body_mode", expand=True)
-            groups = active_custom_groups(scene, mode, body_mode)
-            slots = active_custom_slots(scene, mode)
-            if not groups:
-                source_box.label(text="Preparing custom slot list…", icon='TIME')
-            for group_index, group in enumerate(groups):
-                group_row = source_box.row(align=True)
-                toggle = group_row.operator(
-                    "hd2_lut.toggle_custom_group", text="",
-                    icon='TRIA_DOWN' if group.expanded else 'TRIA_RIGHT',
-                )
-                toggle.mode = mode
-                toggle.group_index = group_index
-                group_row.prop(group, "enabled", text="")
-                group_row.label(text=group.label, icon='IMAGE_DATA')
-                group_row.prop(group, "dds_path", text="")
-                choose = group_row.operator("hd2_lut.select_dds", text="", icon='FILE_FOLDER')
-                choose.mode = mode
-                choose.slot_index = group_index
-                choose.target_kind = "GROUP"
-                if group.expanded:
-                    group_key = custom_group_key(group)
-                    for slot_index, item in enumerate(slots):
-                        key = source_slot_key(item)
-                        if group_key_for_slot(key, body_mode) != group_key:
-                            continue
+            if body_mode == "OVERALL":
+                slots = active_custom_overall_slots(scene, mode)
+                groups = active_custom_groups(scene, mode, body_mode)
+                if not slots or not groups:
+                    source_box.label(text="Preparing custom slot list…", icon='TIME')
+                slot_records = [
+                    (slot_index, item, overall_slot_key(item))
+                    for slot_index, item in enumerate(slots)
+                ]
+                previous_section = None
+                for group_index, group in enumerate(groups):
+                    region = str(group.region).lower()
+                    section = overall_region_section(region)
+                    if previous_section is not None and section != previous_section:
+                        source_box.separator(type='LINE')
+                    previous_section = section
+                    promoted = [
+                        record for record in slot_records
+                        if overall_parent_region(record[2][0]) == region and overall_slot_is_promoted(record[2])
+                    ]
+                    children = [
+                        record for record in slot_records
+                        if overall_parent_region(record[2][0]) == region and not overall_slot_is_promoted(record[2])
+                    ]
+
+                    for slot_index, item, _ in promoted:
                         slot_row = source_box.row(align=True)
-                        slot_row.separator(factor=1.5)
                         slot_row.prop(item, "enabled", text="")
-                        child_label = (
-                            f"{key[0]} / {key[2]}" if body_mode == "OVERALL"
-                            else f"{key[2]}" + (f" #{key[3] + 1}" if key[3] else "")
-                        )
-                        slot_row.label(text=child_label, icon='DOT')
+                        slot_row.label(text=item.label, icon='IMAGE_DATA')
                         slot_row.prop(item, "dds_path", text="")
                         choose = slot_row.operator("hd2_lut.select_dds", text="", icon='FILE_FOLDER')
                         choose.mode = mode
                         choose.slot_index = slot_index
-                        choose.target_kind = "SLOT"
+                        choose.target_kind = "OVERALL_SLOT"
+
+                    if not children:
+                        continue
+                    group_row = source_box.row(align=True)
+                    toggle = group_row.operator(
+                        "hd2_lut.toggle_custom_group", text="",
+                        icon='TRIA_DOWN' if group.expanded else 'TRIA_RIGHT',
+                    )
+                    toggle.mode = mode
+                    toggle.group_index = group_index
+                    group_row.prop(group, "enabled", text="")
+                    group_row.label(text=group.label, icon='IMAGE_DATA')
+                    group_row.prop(group, "dds_path", text="")
+                    choose = group_row.operator("hd2_lut.select_dds", text="", icon='FILE_FOLDER')
+                    choose.mode = mode
+                    choose.slot_index = group_index
+                    choose.target_kind = "GROUP"
+                    if group.expanded:
+                        for slot_index, item, key in children:
+                            slot_row = source_box.row(align=True)
+                            slot_row.separator(factor=1.5)
+                            slot_row.prop(item, "enabled", text="")
+                            side_label = ""
+                            if key[0].startswith("left_"):
+                                side_label = "Left "
+                            elif key[0].startswith("right_"):
+                                side_label = "Right "
+                            layer_label = "Accessories" if key[1] == "accessory" else key[1].replace('_', ' ').title()
+                            child_label = side_label + layer_label
+                            if key[2]:
+                                child_label += f" #{key[2] + 1}"
+                            slot_row.label(text=child_label, icon='DOT')
+                            slot_row.prop(item, "dds_path", text="")
+                            choose = slot_row.operator("hd2_lut.select_dds", text="", icon='FILE_FOLDER')
+                            choose.mode = mode
+                            choose.slot_index = slot_index
+                            choose.target_kind = "OVERALL_SLOT"
+            else:
+                groups = active_custom_groups(scene, mode, body_mode)
+                slots = active_custom_slots(scene, mode)
+                if not groups:
+                    source_box.label(text="Preparing custom slot list…", icon='TIME')
+                for group_index, group in enumerate(groups):
+                    group_row = source_box.row(align=True)
+                    toggle = group_row.operator(
+                        "hd2_lut.toggle_custom_group", text="",
+                        icon='TRIA_DOWN' if group.expanded else 'TRIA_RIGHT',
+                    )
+                    toggle.mode = mode
+                    toggle.group_index = group_index
+                    group_row.prop(group, "enabled", text="")
+                    group_row.label(text=group.label, icon='IMAGE_DATA')
+                    group_row.prop(group, "dds_path", text="")
+                    choose = group_row.operator("hd2_lut.select_dds", text="", icon='FILE_FOLDER')
+                    choose.mode = mode
+                    choose.slot_index = group_index
+                    choose.target_kind = "GROUP"
+                    if group.expanded:
+                        group_key = custom_group_key(group)
+                        for slot_index, item in enumerate(slots):
+                            key = source_slot_key(item)
+                            if group_key_for_slot(key, body_mode) != group_key:
+                                continue
+                            slot_row = source_box.row(align=True)
+                            slot_row.separator(factor=1.5)
+                            slot_row.prop(item, "enabled", text="")
+                            child_label = f"{key[2]}" + (f" #{key[3] + 1}" if key[3] else "")
+                            slot_row.label(text=child_label, icon='DOT')
+                            slot_row.prop(item, "dds_path", text="")
+                            choose = slot_row.operator("hd2_lut.select_dds", text="", icon='FILE_FOLDER')
+                            choose.mode = mode
+                            choose.slot_index = slot_index
+                            choose.target_kind = "SLOT"
         else:
             row = source_box.row(align=True)
             row.label(text=source_name or f"No {label} preset selected", icon='FILE_FOLDER')
@@ -1818,9 +2061,26 @@ class HD2LUT_PT_MainPanel(Panel):
 
         write_box = layout.box()
         write_box.label(text="4. Write patch", icon='FILE_TICK')
+        custom_child_slots = (
+            active_custom_overall_slots(scene, mode)
+            if scene.hd2_lut_custom_body_mode == "OVERALL"
+            else active_custom_slots(scene, mode)
+        )
+        if scene.hd2_lut_custom_body_mode == "OVERALL":
+            child_regions = {
+                overall_parent_region(overall_slot_key(item)[0])
+                for item in custom_child_slots
+                if not overall_slot_is_promoted(overall_slot_key(item))
+            }
+            custom_groups = tuple(
+                group for group in active_custom_groups(scene, mode)
+                if str(group.region).lower() in child_regions
+            )
+        else:
+            custom_groups = active_custom_groups(scene, mode)
         custom_slot_ready = (
-            any(item.enabled and str(item.dds_path).strip() for item in active_custom_slots(scene, mode))
-            or any(item.enabled and str(item.dds_path).strip() for item in active_custom_groups(scene, mode))
+            any(item.enabled and str(item.dds_path).strip() for item in custom_child_slots)
+            or any(item.enabled and str(item.dds_path).strip() for item in custom_groups)
         )
         ready = bool(
             (custom_slot_ready if is_dds_source(scene, mode) else source_id and selected_source_items(scene, mode))
@@ -1881,7 +2141,7 @@ def register():
     bpy.types.Scene.hd2_lut_custom_body_mode = EnumProperty(
         name="Custom slot mode",
         items=(
-            ("OVERALL", "Overall", "One LUT DDS per body part for all body types"),
+            ("OVERALL", "Overall", "One LUT DDS per region and layer for all body types"),
             ("BODY", "Brawny / Lean", "Separate group LUT DDS for each body type"),
         ),
         default="OVERALL",
@@ -1911,6 +2171,10 @@ def register():
     bpy.types.Scene.hd2_lut_armor_custom_slot_index = IntProperty(default=0)
     bpy.types.Scene.hd2_lut_helmet_custom_slots = CollectionProperty(type=HD2LUT_SourceSlotItem)
     bpy.types.Scene.hd2_lut_helmet_custom_slot_index = IntProperty(default=0)
+    bpy.types.Scene.hd2_lut_armor_custom_overall_slots = CollectionProperty(type=HD2LUT_SourceSlotItem)
+    bpy.types.Scene.hd2_lut_armor_custom_overall_slot_index = IntProperty(default=0)
+    bpy.types.Scene.hd2_lut_helmet_custom_overall_slots = CollectionProperty(type=HD2LUT_SourceSlotItem)
+    bpy.types.Scene.hd2_lut_helmet_custom_overall_slot_index = IntProperty(default=0)
     bpy.types.Scene.hd2_lut_armor_custom_overall_groups = CollectionProperty(type=HD2LUT_CustomGroupItem)
     bpy.types.Scene.hd2_lut_armor_custom_body_groups = CollectionProperty(type=HD2LUT_CustomGroupItem)
     bpy.types.Scene.hd2_lut_helmet_custom_overall_groups = CollectionProperty(type=HD2LUT_CustomGroupItem)
@@ -1952,6 +2216,10 @@ def unregister():
         "hd2_lut_armor_custom_body_groups",
         "hd2_lut_armor_custom_overall_groups",
         "hd2_lut_custom_body_mode",
+        "hd2_lut_helmet_custom_overall_slot_index",
+        "hd2_lut_helmet_custom_overall_slots",
+        "hd2_lut_armor_custom_overall_slot_index",
+        "hd2_lut_armor_custom_overall_slots",
         "hd2_lut_helmet_custom_slot_index",
         "hd2_lut_helmet_custom_slots",
         "hd2_lut_armor_custom_slot_index",
