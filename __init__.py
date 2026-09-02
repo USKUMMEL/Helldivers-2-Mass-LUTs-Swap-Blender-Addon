@@ -18,6 +18,7 @@ selected source Texture payload.  The patch writer aliases identical payloads,
 so many destination LUT IDs store the source LUT data only once.
 """
 
+import base64
 import copy
 import hashlib
 import importlib
@@ -30,6 +31,7 @@ import tempfile
 import time
 
 import bpy
+import bpy.utils.previews
 from bpy.props import BoolProperty, CollectionProperty, EnumProperty, IntProperty, StringProperty
 from bpy_extras.io_utils import ImportHelper
 from bpy.types import Operator, Panel, PropertyGroup, UIList
@@ -39,6 +41,11 @@ DATA_CACHE = {}
 CUSTOM_SLOT_CACHE = {}
 PRIVATE_ARCHIVES = {}
 PRIVATE_PAYLOADS = {}
+SUPPORT_ICONS = None
+EMBEDDED_SUPPORT_ICONS = {
+    "paypal": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACcElEQVR42m2SS0jUURSHv3Pvf2Z0NB8VihGaKWGWRe0iclYVQpsC3RREFLqLFpGbYJhFgUgLd0W0iSCaoo1B0UZdVUQUkUKGCkH2GBojbcYZ597TYpx85G91uXC+e853rrA68bghkfDsHYhhoqdxWQcYMIuoe8lE/31QAdFSSbAGMIoBPF7OECq/AB7EgiqY0EU6Blt4zzV6kpaHPY4ifVXG8ACI7sBlHPn5PIvfHYupPPm0spQ9gYjycPxfB6sBAglPLB4AO0Et+XRA9oel8DNE6qPStq2Dp0vHIeFJql0HiAsAs6F6kAb8EhTyggcyOcEGjs7OKKl0FwDjyDoHE0VAOGjChMpxOU9l1CCqVG5yxA47mhpDfP/yoSRsLSDWLowB1rRSEKir9XSfEkwg1G4NiEQDUl8mKDePUBXAkVgvEQC7C6eezdWemhowJs3879v8/HYFzcY41/yraKy4ypUO6vYsm/UHkLChqkIJlzv8wgh923tXHlApFZckCrF4wPRc8WxtnMKfY7Q3v6OqMsDaKYYmIyS1smh+uVhViOsGE5RyZzbGg9xZhiZb1twn1RIfCVZ233Z9C8ZcwtgMkYUh3iQy/8FuTZ+ltqGFudlh+lpeA3D7cyvqOgICewSVTpQaFqPCnhsZKHwlsDmqNr1iYSGGCc6QmS8gwUFuzTxGxOJdIyJiwOzGloXB3wO6QOpQOYdzh0iln1FT3UrY1pPLjKNaQMx+kJOIHMXwwuC9Zyl7lfH+QVRGseFq8HcxZoaCn2L4/B2yuSf07biM6k0iFWWovkX1Od59WpmzO2mXv3TRbPtAL/sG69bI2yB/AR6y8SXyg7NRAAAAAElFTkSuQmCC",
+    "kofi": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACSElEQVR42qWTT0tUcRSGn/O7d+6d8Ro6Uu3cZYlUqCAmQYkbK3KpVvYBWvQBohZJi7YFRos+gP9aCCVYG4M2LYxSMxEtCApaVOrkaHPv3Ps7LUZzdGrVWR7OX97nhfJQFVQN/wpVg6qUp9w9zSIKaONU2CqOnMPao6Uqs6xFfbYk8mZfLVKeaBpfr5Oa9AMc97JJO6DbwwVsIYEkHtFc4fpiX+3qTo9w+7aBQU60URO74TTVfnO8vmUBu+8B42erDJvhrER+17sZcjCI9I6r87hPksbJ/KiTDfqr8luRg3r6Z7uAMYCyFtrI1gSet7E5tnih+lLvuDoC0PY83/xN02/PZpPkXnPKEU8w2/8poEVFEHJF5cZ8lLz66ToHKbTMdFfPugChNT027eihVKRZz6P4Yhq+fC5dUF9PqrOLu+8j6nzDUEtKz7w2msvRA5QGqGgDisQqKJCfmMAuzJceP36S2s4uFnKWBOXaEZeMICHSAPBXzdMDA0gQIEFAMHAVVbjfkmK4w+fhhyLfI0hLGQeiuoKgKUcQlEz7Kfybt0oXtLcDyssfMPypwNx6QnU2pfGWruwOMDx1o+TOch75WoCMWEzHaQBsaPmlwqOPRebWLIczRmwhEcdJPQF2ZWyazI/a2qA/s7EV+a54aks6ijGEVtmMwRMbSW3gFVc3x5Yu7shYBpJ1w2k94DcX1/aCJIBrMKamyiQb4awbl4FUgXK2aggxV/ajnBQSNIlHpALlSjPROBW2Gtfp1iQ+tsdM5/0KM/G/dv4N4zQouRknkjEAAAAASUVORK5CYII=",
+}
 # Keep the destination's Pattern Mask and ID Mask Array: they describe that
 # armor's own regions.  Pattern LUT (2) remains opt-in via the UI option.
 ARMORLUT_CHANNELS = (9, 10)
@@ -46,6 +53,26 @@ ARMORLUT_CHANNELS = (9, 10)
 
 class LUTSwapError(Exception):
     """A recoverable preflight or write error."""
+
+
+def support_icon_value(name):
+    if SUPPORT_ICONS is None or name not in SUPPORT_ICONS:
+        return 0
+    return SUPPORT_ICONS[name].icon_id
+
+
+def armor_swap_support_is_visible(context):
+    """Return true while the enabled Armor/Helmet swap add-on owns the support UI."""
+    try:
+        for addon in context.preferences.addons:
+            module_name = str(getattr(addon, "module", "")).replace("-", "_").casefold()
+            if "hd2_mass_id_swap" in module_name or "hd2_armor_multi_swap" in module_name:
+                return True
+    except (AttributeError, TypeError):
+        pass
+
+    # Fallback for legacy installs whose Preferences module ID is unusual.
+    return hasattr(bpy.types, "HD2MS_PT_MainPanel")
 
 
 def is_sdk_module(module):
@@ -1627,6 +1654,18 @@ class HD2LUT_OT_GeneratePatch(Operator):
         return {'FINISHED'}
 
 
+class HD2LUT_OT_OpenSupportLink(Operator):
+    bl_idname = "hd2_lut.open_support_link"
+    bl_label = "Open Support Link"
+    bl_description = "Open the creator's support page in your web browser"
+
+    url: StringProperty(options={'HIDDEN'})
+
+    def execute(self, context):
+        bpy.ops.wm.url_open(url=self.url)
+        return {'FINISHED'}
+
+
 class HD2LUT_PT_MainPanel(Panel):
     bl_label = "HD2 LUT / Texture ID Swap"
     bl_idname = "HD2LUT_PT_main_panel"
@@ -1637,6 +1676,25 @@ class HD2LUT_PT_MainPanel(Panel):
     def draw(self, context):
         layout = self.layout
         scene = context.scene
+
+        if not armor_swap_support_is_visible(context):
+            support_box = layout.box()
+            support_box.label(text="Created by Uskummel", icon='USER')
+            support_box.label(text="If this saved your time:", icon='FUND')
+            support_row = support_box.row(align=True)
+            paypal = support_row.operator(
+                "hd2_lut.open_support_link",
+                text="Buy me a coffee (PayPal)",
+                icon_value=support_icon_value("paypal"),
+            )
+            paypal.url = "http://paypal.me/uskummel"
+            kofi = support_row.operator(
+                "hd2_lut.open_support_link",
+                text="Buy me a coffee (Ko-fi)",
+                icon_value=support_icon_value("kofi"),
+            )
+            kofi.url = "https://ko-fi.com/uskummel"
+
         sdk = get_sdk()
         if sdk is None:
             layout.label(text="Enable HD2SDK first.", icon='ERROR')
@@ -1792,13 +1850,24 @@ CLASSES = (
     HD2LUT_OT_SelectDDS,
     HD2LUT_OT_ToggleCustomGroup,
     HD2LUT_OT_GeneratePatch,
+    HD2LUT_OT_OpenSupportLink,
     HD2LUT_PT_MainPanel,
 )
 
 
 def register():
+    global SUPPORT_ICONS
     for cls in CLASSES:
         bpy.utils.register_class(cls)
+
+    SUPPORT_ICONS = bpy.utils.previews.new()
+    icon_folder = os.path.join(bpy.app.tempdir, "hd2_lut_swap_icons")
+    os.makedirs(icon_folder, exist_ok=True)
+    for icon_name in ("paypal", "kofi"):
+        icon_path = os.path.join(icon_folder, f"{icon_name}.png")
+        with open(icon_path, "wb") as icon_file:
+            icon_file.write(base64.b64decode(EMBEDDED_SUPPORT_ICONS[icon_name]))
+        SUPPORT_ICONS.load(icon_name, icon_path, 'IMAGE')
 
     bpy.types.Scene.hd2_lut_mode = EnumProperty(
         name="Mode",
@@ -1874,6 +1943,7 @@ def register():
 
 
 def unregister():
+    global SUPPORT_ICONS
     if bpy.app.timers.is_registered(initialize_custom_slots_after_register):
         bpy.app.timers.unregister(initialize_custom_slots_after_register)
     properties = (
@@ -1917,6 +1987,9 @@ def unregister():
             delattr(bpy.types.Scene, name)
     for cls in reversed(CLASSES):
         bpy.utils.unregister_class(cls)
+    if SUPPORT_ICONS is not None:
+        bpy.utils.previews.remove(SUPPORT_ICONS)
+        SUPPORT_ICONS = None
 
 
 if __name__ == "__main__":
