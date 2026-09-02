@@ -1,0 +1,2369 @@
+{
+    "light": {
+        "67baff6f1c9a2775": {
+            "name": "FS-37 Ravager",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "5555255822099584608",
+                            "unit_id_hex": "4d183bbcb8aa9660",
+                            "material_lut": "675e63b143544885",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "5f6dbf7fbbccccdd": {
+            "name": "CW-4 Arctic Ranger",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "17438525524839299421",
+                            "unit_id_hex": "f202169252a0f95d",
+                            "material_lut": "ac26c3e6de0e9e56",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "ac3d44f70c5fa23b": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7285925993452441626",
+                            "unit_id_hex": "651ccf16ab84901a",
+                            "material_lut": "bb63517342e6fde5",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "4214b099ad2458bd": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7285925993452441626",
+                            "unit_id_hex": "651ccf16ab84901a",
+                            "material_lut": "918f48dc5d428bf8",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "aee084ead49d7542": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7285925993452441626",
+                            "unit_id_hex": "651ccf16ab84901a",
+                            "material_lut": "ee31382c36108748",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "cceca27fd7bc742e": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7285925993452441626",
+                            "unit_id_hex": "651ccf16ab84901a",
+                            "material_lut": "fe6ab4de138a622e",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "ee8dcc850d7a793b": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7285925993452441626",
+                            "unit_id_hex": "651ccf16ab84901a",
+                            "material_lut": "3b0a4638b55a5415",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "1523cd5b1924c862": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7285925993452441626",
+                            "unit_id_hex": "651ccf16ab84901a",
+                            "material_lut": "58144cd2797fa954",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "0845a15bbb31dcc6": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7285925993452441626",
+                            "unit_id_hex": "651ccf16ab84901a",
+                            "material_lut": "a189fd1f4a9bdc48",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "dbe6c57c7e3b8747": {
+            "name": "GS-11 Democracy's Deputy",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "2920725188299623770",
+                            "unit_id_hex": "2888801587228d5a",
+                            "material_lut": "d7255957eccde337",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "4b92ff9a0256159f": {
+            "name": "DS-10 Big Game Hunter",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "5853218845032405587",
+                            "unit_id_hex": "513acf8722c75a53",
+                            "material_lut": "9b0e60190fbb7e0d",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "b977f9d5411386d0": {
+            "name": "RS-100 Sanctioner",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "11586703162267525687",
+                            "unit_id_hex": "a0cc3d2318d9e237",
+                            "material_lut": "2d079ad2f41684e1",
+                            "pattern_lut": "0000000000000000"
+                        }
+                    ]
+                }
+            }
+        },
+        "2fb07d7a9b9252aa": {
+            "name": "RE-1861 Parade Commander",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "12758505377461713108",
+                            "unit_id_hex": "b10f510b188438d4",
+                            "material_lut": "68664b6e443360d5",
+                            "pattern_lut": "c3f8395395916dba"
+                        }
+                    ]
+                }
+            }
+        },
+        "44c466a6cf09718b": {
+            "name": "BP-20 Correct Officer",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "1626486170957620566",
+                            "unit_id_hex": "1692708e1403a556",
+                            "material_lut": "14f2a71ccba41d6f",
+                            "pattern_lut": "0000000000000000"
+                        }
+                    ]
+                }
+            }
+        },
+        "2a7c626239a5d6b4": {
+            "name": "BP-32 Jackboot",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "4169083875469264217",
+                            "unit_id_hex": "39db8fb22c278559",
+                            "material_lut": "e126fcb790a54577",
+                            "pattern_lut": "0000000000000000"
+                        }
+                    ]
+                }
+            }
+        },
+        "98d52b64727d362b": {
+            "name": "I-09 Heatseeker",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "8374885877894426397",
+                            "unit_id_hex": "743992557a552f1d",
+                            "material_lut": "0dc31b301a6dea16",
+                            "pattern_lut": "8cbe842ef9b019fb"
+                        }
+                    ]
+                }
+            }
+        },
+        "f1ab0e94450ff1f6": {
+            "name": "KDM-763 Pacesetter",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "3841448710560675741",
+                            "unit_id_hex": "354f913fd7d9f79d",
+                            "material_lut": "28c8cf655e153695",
+                            "pattern_lut": "0000000000000000"
+                        }
+                    ]
+                }
+            }
+        },
+        "bf06d78a228c3904": {
+            "name": "TG-8 Sharpshooter",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13824941454287247048",
+                            "unit_id_hex": "bfdc0f01475d16c8",
+                            "material_lut": "8b52f399d2fa1e35",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                },
+                "cape": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "16898753697676024736",
+                            "unit_id_hex": "ea846ef460cc5ba0",
+                            "material_lut": "0000000000000000",
+                            "pattern_lut": "0000000000000000"
+                        }
+                    ]
+                }
+            }
+        },
+        "8517a93d6e19a56e": {
+            "name": "TG-122 Demo-Trooper",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "16686489699036771610",
+                            "unit_id_hex": "e79251f8f34d351a",
+                            "material_lut": "97b189e7b25a2d05",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                },
+                "cape": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "16898753697676024736",
+                            "unit_id_hex": "ea846ef460cc5ba0",
+                            "material_lut": "0000000000000000",
+                            "pattern_lut": "0000000000000000"
+                        }
+                    ]
+                }
+            }
+        },
+        "804e40c3115e9650": {
+            "name": "RS-89 Shadow Paragon",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "5875036652163912175",
+                            "unit_id_hex": "518852b536a151ef",
+                            "material_lut": "6c06fd29cd745ad6",
+                            "pattern_lut": "b8e3856671c3e659"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "medium": {
+        "e9f7da425997f38b": {
+            "name": "CW-22 Kodiak",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "6075028763446045879",
+                            "unit_id_hex": "544ed679357b6cb7",
+                            "material_lut": "37351c932a2c833d",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "fd1028aaaa651c2f": {
+            "name": "SA-25 Steel Trooper",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "d3ce605892d5331b",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ],
+                    "accessory": [
+                        {
+                            "unit_id_dec": "9906437840165122024",
+                            "unit_id_hex": "897abcbaa487afe8",
+                            "material_lut": "a2dfbef203818819",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "3196ede0c925ba83": {
+            "name": "SA-12 Servo-Assisted",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "6678011981787728539",
+                            "unit_id_hex": "5cad10840c428a9b",
+                            "material_lut": "83cafd24def7aad1",
+                            "pattern_lut": "fdc2ae536ab71a2a"
+                        }
+                    ]
+                }
+            }
+        },
+        "e4e4639f4365ca4e": {
+            "name": "SA-32 Dynamo",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13135626165718134923",
+                            "unit_id_hex": "b64b1e66f5f4b08b",
+                            "material_lut": "d3bdbd0524d5019a",
+                            "pattern_lut": "fdc2ae536ab71a2a"
+                        }
+                    ]
+                }
+            }
+        },
+        "80f8e300f67850e9": {
+            "name": "CE-74 Breaker",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "12730382597307458442",
+                            "unit_id_hex": "b0ab67861753638a",
+                            "material_lut": "255e1c2103ce913c",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "75a21fc49f80fb9c": {
+            "name": "AF-91 Field Chemist",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "14733069420597479532",
+                            "unit_id_hex": "cc76609431e2086c",
+                            "material_lut": "eef430741b9fa970",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "7ae5a2f32d6f24f1": {
+            "name": "AF-91 Field Chemist",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "14733069420597479532",
+                            "unit_id_hex": "cc76609431e2086c",
+                            "material_lut": "7b8632cb7b17d69c",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "3fc1a4041b22131e": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "14733069420597479532",
+                            "unit_id_hex": "cc76609431e2086c",
+                            "material_lut": "2ed8d40f66c1cf69",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "1a9e30964b6b9812": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "14057621012047117219",
+                            "unit_id_hex": "c316b3d47a22bba3",
+                            "material_lut": "6fbe9af5fcc915c7",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "eb3914f15e4151ff": {
+            "name": "DP-00 Tactical",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "8561217713380376446",
+                            "unit_id_hex": "76cf8e26aad1bf7e",
+                            "material_lut": "8b436d1ca6717087",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "b72f72e3863c1611": {
+            "name": "CE-35 Trench Engineer",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7601348670501265665",
+                            "unit_id_hex": "697d6a57971da101",
+                            "material_lut": "ed6ea5febfce5d88",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "ed5d869cda68286e": {
+            "name": "CE-67 Titan",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7902265795160533902",
+                            "unit_id_hex": "6daa7cdf69436b8e",
+                            "material_lut": "c71653c54e3ec379",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "38a82f5be66c5b36": {
+            "name": "CE-27 Ground Breaker",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "11313096106785347680",
+                            "unit_id_hex": "9d0030f842cb9860",
+                            "material_lut": "5383fa5700635ab5",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "5828025300024f4f": {
+            "name": "CM-09 Bonesnapper",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "16001723592336083491",
+                            "unit_id_hex": "de118ad3932e0a23",
+                            "material_lut": "b26b0eafb3cd48fe",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "fadecbde1e20ad47": {
+            "name": "CM-21 Trench Paramedic",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "8382130788667610504",
+                            "unit_id_hex": "74534f8ab765d588",
+                            "material_lut": "347f9ec7e058c863",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "22bb11d902251d11": {
+            "name": "CM-17 Butcher",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "10583934180552236525",
+                            "unit_id_hex": "92e1b00fa5ee5ded",
+                            "material_lut": "be600ae5c0ba9e64",
+                            "pattern_lut": "e1e99847592231e2"
+                        }
+                    ]
+                }
+            }
+        },
+        "fcb56daa66137cb6": {
+            "name": "CM-10 Clinician",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7808024526513152240",
+                            "unit_id_hex": "6c5bacf02c5aa0f0",
+                            "material_lut": "5aaafb80387e3739",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "d1a39b5edac646aa": {
+            "name": "B-22 Model Citizen",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "7d27f46409a3e60c",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "687636554fbf6a46": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "bd9573c01e687404",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "88b7d737b6e62cc0": {
+            "name": "UF-84 Doubt Killer",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "2848319129973786871",
+                            "unit_id_hex": "278743285d0988f7",
+                            "material_lut": "589fc085ad63a6d9",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "c720eb21745daa53": {
+            "name": "FS-61 Dreadnought",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "18435226424678019495",
+                            "unit_id_hex": "ffd714c25cd3f1a7",
+                            "material_lut": "4117ed29a02f9248",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "fdd3d3e677e5a3f4": {
+            "name": "CE-07 Demolition Specialist",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7744913445459795635",
+                            "unit_id_hex": "6b7b75be8cc71eb3",
+                            "material_lut": "12df1ea58b9a753e",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "19888141475bf282": {
+            "name": "SC-15 Drone Master",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "9689159159731344788",
+                            "unit_id_hex": "8676ceeba0025594",
+                            "material_lut": "e3f6acad6234523e",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "0290d8011fce62ef": {
+            "name": "FS-38 Eradicator",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "9396741587218288497",
+                            "unit_id_hex": "8267eeb000494f71",
+                            "material_lut": "5c20317d455e8502",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "18e40c54da8c54bf": {
+            "name": "EX-03 Prototype 3",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "3910569372330332832",
+                            "unit_id_hex": "36452220034592a0",
+                            "material_lut": "df19e8b27084536c",
+                            "pattern_lut": "e1e99847592231e2"
+                        }
+                    ]
+                }
+            }
+        },
+        "3a169e8ac4b9c62e": {
+            "name": "EX-16 Prototype 16",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "14676861962345020465",
+                            "unit_id_hex": "cbaeb03183047c31",
+                            "material_lut": "a1270debf3417613",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "40cecc6f5af56654": {
+            "name": "FS-34 Exterminator",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "862174694943184392",
+                            "unit_id_hex": "0bf70f512a6b5608",
+                            "material_lut": "d14e6b0d3765957c",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "9d538582c1cd96b8": {
+            "name": "DP-40 Hero of the Federation",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "3148179888321948003",
+                            "unit_id_hex": "2bb094edbc756963",
+                            "material_lut": "4f15620edc8784f5",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "7cec1f264535f3c8": {
+            "name": "TR-9 Cavalier of Democracy",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "3148179888321948003",
+                            "unit_id_hex": "2bb094edbc756963",
+                            "material_lut": "5676caa47159947b",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "a45cfd81d5ea873b": {
+            "name": "DP-11 Champion of the People",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "5252955854116479892",
+                            "unit_id_hex": "48e63f84996be394",
+                            "material_lut": "005aead4666d190b",
+                            "pattern_lut": "e1e99847592231e2"
+                        }
+                    ]
+                }
+            }
+        },
+        "1bf281b613081b05": {
+            "name": "CM-14 Physician",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "15819689819915417733",
+                            "unit_id_hex": "db8ad4132cebf885",
+                            "material_lut": "4cc7808591559801",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "7c3496a468bf0028": {
+            "name": "TR-117 Alpha Commander",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "15819689819915417733",
+                            "unit_id_hex": "db8ad4132cebf885",
+                            "material_lut": "072dd57668f76d99",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "e2a2e33407398d9e": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13108926888288924404",
+                            "unit_id_hex": "b5ec438d030732f4",
+                            "material_lut": "a8ca62ca9574d0ac",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "782350ebeb6de6d8": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "17768137074298696508",
+                            "unit_id_hex": "f6951a878a05b33c",
+                            "material_lut": "4d6340623a32b074",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "49076aae3fe24987": {
+            "name": "B-27 Fortified Commando",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "8399161923851875572",
+                            "unit_id_hex": "748fd144e22d74f4",
+                            "material_lut": "52e3be44f1d42909",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "c926637abbe0eaf1": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "1921837558101922801",
+                            "unit_id_hex": "1aabbd13a6ab53f1",
+                            "material_lut": "3f7615faf7ef9d71",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "bf02ab023a9248f3": {
+            "name": "EX-00 Prototype X",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "6469607965781156094",
+                            "unit_id_hex": "59c8aa2adc6c60fe",
+                            "material_lut": "ff5a9653e38b312d",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "8230afe78d703e38": {
+            "name": "CE-81 Juggernaut",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13254993767511698164",
+                            "unit_id_hex": "b7f3329a848d2af4",
+                            "material_lut": "d42fc3832ddbf81d",
+                            "pattern_lut": "e1e99847592231e2"
+                        }
+                    ]
+                }
+            }
+        },
+        "59d238094a164c88": {
+            "name": "DP-8 Mountain-Scaled",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "5837388310570650004",
+                            "unit_id_hex": "510291bd9b94c994",
+                            "material_lut": "1b18dd5bb17738d4",
+                            "pattern_lut": "0000000000000000"
+                        }
+                    ]
+                }
+            }
+        },
+        "bb23cba9b7524c91": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "2123465521732463246",
+                            "unit_id_hex": "1d7810a433a72a8e",
+                            "material_lut": "806f0a614bab3ede",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "0a03573534303d12": {
+            "name": "SC-37 Legionnaire",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "2123465521732463246",
+                            "unit_id_hex": "1d7810a433a72a8e",
+                            "material_lut": "012d71f4d1718234",
+                            "pattern_lut": "fdc2ae536ab71a2a"
+                        }
+                    ]
+                }
+            }
+        },
+        "0d7bc50b425c1daa": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "2123465521732463246",
+                            "unit_id_hex": "1d7810a433a72a8e",
+                            "material_lut": "7f2b201a1efdea60",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "5dc26abb2113cda5": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "4865030268636470400",
+                            "unit_id_hex": "43840f40d7999c80",
+                            "material_lut": "1636e38dfbcf0112",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "7805dbf6f83b09ba": {
+            "name": "B-08 Light Gunner",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "4131421001356999706",
+                            "unit_id_hex": "3955c182f378fc1a",
+                            "material_lut": "d26689f1815d204e",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "a856edff49cfdd95": {
+            "name": "A-9 Helljumper",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "15418518113916889238",
+                            "unit_id_hex": "d5f99488a6f12896",
+                            "material_lut": "5c481fc00966b6f9",
+                            "pattern_lut": "c3f8395395916dba"
+                        }
+                    ]
+                }
+            }
+        },
+        "1a2fc86abd27bf5b": {
+            "name": "A-35 Recon",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "8662683021885766733",
+                            "unit_id_hex": "7838084fc14efc4d",
+                            "material_lut": "31c26f8e129cb8b1",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "0121fd0e8370a1dc": {
+            "name": "DP-53 Savior of the Free",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "17016371081593995329",
+                            "unit_id_hex": "ec264b5794a3c041",
+                            "material_lut": "9475b6064eac2a0b",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "e08b7a38aa847b58": {
+            "name": "SC-30 Trailblazer Scout",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7285925993452441626",
+                            "unit_id_hex": "651ccf16ab84901a",
+                            "material_lut": "028cfcfea3304e83",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "bb58aea9beba9e0e": {
+            "name": "B-24 Enforcer",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "3954130796314399534",
+                            "unit_id_hex": "36dfe50265c0932e",
+                            "material_lut": "f0b7de1b59049e41",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "e4a1da534bac818e": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "18429449806859828280",
+                            "unit_id_hex": "ffc28ef4b7c57c38",
+                            "material_lut": "c8ffc7802e350a35",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "c0dc0a7c8fc55214": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "18429449806859828280",
+                            "unit_id_hex": "ffc28ef4b7c57c38",
+                            "material_lut": "d492589603bf2988",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "8008eb7a0eccbcc1": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "18429449806859828280",
+                            "unit_id_hex": "ffc28ef4b7c57c38",
+                            "material_lut": "ad2f6ead06da5e93",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "453c6def93940335": {
+            "name": "FS-05 Marksman",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "18429449806859828280",
+                            "unit_id_hex": "ffc28ef4b7c57c38",
+                            "material_lut": "414e0c2185c23da8",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "e9809fc724be99c6": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "18429449806859828280",
+                            "unit_id_hex": "ffc28ef4b7c57c38",
+                            "material_lut": "37a07ff263fa80c3",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "8676515e7b30ed3d": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "18429449806859828280",
+                            "unit_id_hex": "ffc28ef4b7c57c38",
+                            "material_lut": "8b2d8cca04e71271",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "0e220545432c3676": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "18429449806859828280",
+                            "unit_id_hex": "ffc28ef4b7c57c38",
+                            "material_lut": "26d5c1f7bd5afa92",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "52b63b45c7a6dbac": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "18429449806859828280",
+                            "unit_id_hex": "ffc28ef4b7c57c38",
+                            "material_lut": "bd20238ca41b19dc",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "ff2a9db5dfe875d3": {
+            "name": "FS-11 Executioner",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "8379182691508484484",
+                            "unit_id_hex": "7448d6435b76f984",
+                            "material_lut": "1dd623b9c7f405b6",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "89f78c9443bffe9c": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "15567352184674080261",
+                            "unit_id_hex": "d80a585524e65605",
+                            "material_lut": "873f06b092fc996c",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "770f67630b1b3292": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "15567352184674080261",
+                            "unit_id_hex": "d80a585524e65605",
+                            "material_lut": "fba41370a750b3fd",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "984f49b3c0542aa3": {
+            "name": "SC-34 Infiltrator",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "15567352184674080261",
+                            "unit_id_hex": "d80a585524e65605",
+                            "material_lut": "1ecb74a58c6da430",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "155c93418f2c6a72": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "15567352184674080261",
+                            "unit_id_hex": "d80a585524e65605",
+                            "material_lut": "56a85d30315eaab3",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "f85a77eace8afa7a": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "15567352184674080261",
+                            "unit_id_hex": "d80a585524e65605",
+                            "material_lut": "95a3264e1c2c9752",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "304313b88483ef47": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "15567352184674080261",
+                            "unit_id_hex": "d80a585524e65605",
+                            "material_lut": "481d1fad7fdff54f",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "adabc9debb6e2bfc": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "15567352184674080261",
+                            "unit_id_hex": "d80a585524e65605",
+                            "material_lut": "21be6ff52e29ebf8",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "bbaf861ceb582ef6": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "65b4e28963cf654b",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "a0ce7d80e81fc62e": {
+            "name": "TR-7 Ambassador of the Brand",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "f25fe325a474fb6d",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "8978807640a47498": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "7295835ae1fa3f6e",
+                            "pattern_lut": "8f79858a431980c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "e0491eb4fb357d2a": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "fa480b44aeb3062a",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "202af54b4fe5dd85": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "5c074325c6ed44d6",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "e5fe990d7d56cd2e": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "3a2efcd45ca663ce",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "fd109bfeeed36726": {
+            "name": "B-01 Tactical (Variation 1)",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "d3ce605892d5331b",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "3b143cc283b7f707": {
+            "name": "B-01 Tactical (Variation 2)",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "8873186107497182744",
+                            "unit_id_hex": "7b23e3c0ab4cf618",
+                            "material_lut": "d3ce605892d5331b",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "f4880623d32bafa9": {
+            "name": "B-01 Tactical (Variation 3)",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "14514172405078426917",
+                            "unit_id_hex": "c96cb2e72d7a0525",
+                            "material_lut": "d3ce605892d5331b",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "8313c9a556b8ee85": {
+            "name": "B-01 Tactical (Variation 4)",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "8651754045361790910",
+                            "unit_id_hex": "781134771dd69fbe",
+                            "material_lut": "d3ce605892d5331b",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "27d27e14b4e66f50": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "5dc4e78804539506",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "3cd03a1159968eb5": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "20462a52e9eb233c",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "3ee85c0f44ad92cc": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "8454ae891892e1d9",
+                            "pattern_lut": "4cac10858d877485"
+                        }
+                    ]
+                }
+            }
+        },
+        "32a6a7761c70c19b": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "b7539f4ff15471ef",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "cd08c722235e75cc": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "29edf029af6aee3d",
+                            "pattern_lut": "4cac10858d877485"
+                        }
+                    ]
+                }
+            }
+        },
+        "9a37b0e0df207c60": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "be1d80bd3e595338",
+                            "pattern_lut": "3ee9b86790283f9a"
+                        }
+                    ]
+                }
+            }
+        },
+        "c19663a7f34f88fc": {
+            "name": "TR-40 Gold Eagle",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13556064353924354700",
+                            "unit_id_hex": "bc20d0b4efff128c",
+                            "material_lut": "5242dabfb45837ce",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "884fde6481f699e3": {
+            "name": "AF-52 Lockdown",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "11406260482220867111",
+                            "unit_id_hex": "9e4b2d79c259be27",
+                            "material_lut": "e7cda94cb9555f99",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "21a24072a79aeba8": {
+            "name": "AF-91 Field Chemist",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "11119869549214732924",
+                            "unit_id_hex": "9a51b6707da0927c",
+                            "material_lut": "577c98d166cbe057",
+                            "pattern_lut": "4cac10858d877485"
+                        }
+                    ]
+                }
+            }
+        },
+        "292b09dac80ce1de": {
+            "name": "UF-84 Doubt Killer",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "2848319129973786871",
+                            "unit_id_hex": "278743285d0988f7",
+                            "material_lut": "20c4273d01e1aceb",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "84fd7aab7cf6f62d": {
+            "name": "SR-64 Cinderblock",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "15652406647423938091",
+                            "unit_id_hex": "d93884ea73aaae2b",
+                            "material_lut": "1d09f423f8061cbb",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "37882724fe5a136e": {
+            "name": "IE-57 Hell-Bent",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "12941176804273243829",
+                            "unit_id_hex": "b3984bbcfa3b46b5",
+                            "material_lut": "8b9ff4bd24b009fc",
+                            "pattern_lut": "c3f8395395916dba"
+                        }
+                    ]
+                }
+            }
+        },
+        "be54826ac0d5f4db": {
+            "name": "AD-11 Livewire",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "875166177103928158",
+                            "unit_id_hex": "0c25370051b75b5e",
+                            "material_lut": "4b499c009f623371",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "70335c90463d4368": {
+            "name": "CW-9 White Wolf",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7876815139290439352",
+                            "unit_id_hex": "6d5011a2d2d35eb8",
+                            "material_lut": "73b9b6b374b7cfb9",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "92c0b2ea0ab6f69e": {
+            "name": "CE-64 Grenadier",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "8678656197582665224",
+                            "unit_id_hex": "7870c7d488a83608",
+                            "material_lut": "e90c1a9190719591",
+                            "pattern_lut": "8cc912b87d2f089e"
+                        }
+                    ]
+                }
+            }
+        },
+        "5c82005edd85558c": {
+            "name": "PH-56 Jaguar",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "1619799062283423855",
+                            "unit_id_hex": "167aaeaa42ea106f",
+                            "material_lut": "de1041a77f33a03a",
+                            "pattern_lut": "afdef81eacbc4e1c"
+                        }
+                    ],
+                    "accessory": [
+                        {
+                            "unit_id_dec": "14880400071593397174",
+                            "unit_id_hex": "ce81cd067f058bb6",
+                            "material_lut": "308e0da7e9eec894",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "9e9d2e828d1146d0": {
+            "name": "I-92 Fire Fighter",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "1089481995096327574",
+                            "unit_id_hex": "0f1e9e1a2ae68596",
+                            "material_lut": "544e722b0d1c0c7d",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "42d4df4c690e6491": {
+            "name": "RS-6 Fiend Destroyer",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "10209554656734551868",
+                            "unit_id_hex": "8daf9fde25991f3c",
+                            "material_lut": "c7a5a9e9db43f6f6",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "3cf26a29a0012282": {
+            "name": "O-44 Bonded Pilot",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "362230160882931272",
+                            "unit_id_hex": "0506e669825c1648",
+                            "material_lut": "0d8c20ce272a7a1d",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "7f49d834a7764207": {
+            "name": "SA-04 Combat Technician",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7648023769279353857",
+                            "unit_id_hex": "6a233d18e1a3d401",
+                            "material_lut": "d39307d22333b0a2",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "a0a51b7b380c6d1a": {
+            "name": "AF-50 Noxious Ranger",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "14490609863577937175",
+                            "unit_id_hex": "c918fce57955a517",
+                            "material_lut": "6285b799584916a1",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "be1fbdaa4b77e86b": {
+            "name": "AF-02 Haz-Master",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "4865030268636470400",
+                            "unit_id_hex": "43840f40d7999c80",
+                            "material_lut": "6e2544c0adec5181",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "15dcd137ebe874ed": {
+            "name": "UF-50 Bloodhound",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "14733483563195715658",
+                            "unit_id_hex": "cc77d93d4856504a",
+                            "material_lut": "31bfb890f5a369e8",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "fb025c06b0408e5f": {
+            "name": "UF-16 Inspector",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "2297438333961312338",
+                            "unit_id_hex": "1fe223fe0d211852",
+                            "material_lut": "f4d85004a1c36a1a",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "b68f33f2cdd058da": {
+            "name": "SR-24 Street Scout",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "13164148178108423800",
+                            "unit_id_hex": "b6b0730576c21e78",
+                            "material_lut": "f81d50ef0ea7d046",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "c7b0eaff041030c2": {
+            "name": "SR-18 Roadblock",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "2715776501221045608",
+                            "unit_id_hex": "25b06056cca23568",
+                            "material_lut": "09c897dda8d9f108",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "fea0e08cff101f8e": {
+            "name": "IE-3 Martyr",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "8035325190270545130",
+                            "unit_id_hex": "6f8335b004d2ecea",
+                            "material_lut": "b467c9aa53f4eb1c",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "213bbf4edad25223": {
+            "name": "GS-17 Frontier Marshall",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "14297126877334652644",
+                            "unit_id_hex": "c66999254038c6e4",
+                            "material_lut": "d160a6f7bde30d88",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "b4d15b145b3f7677": {
+            "name": "RE-2310 Honorary Guard",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "12628959026638052995",
+                            "unit_id_hex": "af431352d9b95e83",
+                            "material_lut": "d9174df37b5a0c87",
+                            "pattern_lut": "c3f8395395916dba"
+                        }
+                    ]
+                }
+            }
+        },
+        "7cfc63f636fa5132": {
+            "name": "AD-26 Bleeding Edge",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "10445627675959038134",
+                            "unit_id_hex": "90f65307298710b6",
+                            "material_lut": "73c0a52b7a33c6a6",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "c5e272869f1386b6": {
+            "name": "AD-49 Apollonian",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "9975523152882285545",
+                            "unit_id_hex": "8a702d74783bbbe9",
+                            "material_lut": "a775d5c73248d22e",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "2c5f7890ce9b75b6": {
+            "name": "RS-20 Constrictor",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7673885235683731198",
+                            "unit_id_hex": "6a7f1df6c00b26fe",
+                            "material_lut": "2fe5942c6e1c2261",
+                            "pattern_lut": "e1e99847592231e2"
+                        }
+                    ]
+                }
+            }
+        },
+        "719e9e75f790d580": {
+            "name": "SA-7 Headfirst",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "8688149011154174433",
+                            "unit_id_hex": "7892817e6d8181e1",
+                            "material_lut": "a45a131702600061",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "f0daae91a2027fd7": {
+            "name": "PH-9 Predator",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "4541334684346792740",
+                            "unit_id_hex": "3f060fd59aa6bb24",
+                            "material_lut": "3f68f6e59e68e07f",
+                            "pattern_lut": "2949b23af9ef04fb"
+                        }
+                    ]
+                }
+            }
+        },
+        "e9f6ef51d693fdd5": {
+            "name": "I-102 Draconaught",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "4382571357012474472",
+                            "unit_id_hex": "3cd2056de987ba68",
+                            "material_lut": "6dc7c8ddc537d883",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "88be7bc44053c400": {
+            "name": "KDM-73 Dragoon",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "12142400203637079700",
+                            "unit_id_hex": "a88278a6ea6b3e94",
+                            "material_lut": "feab29aaacd1c6ca",
+                            "pattern_lut": "0000000000000000"
+                        }
+                    ]
+                }
+            }
+        },
+        "424fed21023b620d": {
+            "name": "AC-1 Dutiful",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "321335359463830030",
+                            "unit_id_hex": "04759cce929d320e",
+                            "material_lut": "e2d9181ca4c21be1",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "080f2f101b1fb6f6": {
+            "name": "AC-2 Obedient",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "3286421935347422185",
+                            "unit_id_hex": "2d9bb756866f53e9",
+                            "material_lut": "ec55d530a07ba7be",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "b0db976d98b02a95": {
+            "name": "RS-67 Null Cipher",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "12041764276490687563",
+                            "unit_id_hex": "a71cf0cf3937544b",
+                            "material_lut": "2bc5a80c6fa6edb0",
+                            "pattern_lut": "0000000000000000"
+                        }
+                    ]
+                }
+            }
+        },
+        "d4fb7d61ad409841": {
+            "name": "CPG-48 Sapper",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7057651244424989457",
+                            "unit_id_hex": "61f1d069ec8b8b11",
+                            "material_lut": "5fbbe7507689a05e",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "a67993f7af5594d8": {
+            "name": "CPH-26 Commandant",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "4935522424991749936",
+                            "unit_id_hex": "447e7f7efa9b9730",
+                            "material_lut": "0694fb45461caa22",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "98da89d0d5132867": {
+            "name": "FS-23 Battle Master / TR-62 Knight",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "10683583799272006843",
+                            "unit_id_hex": "9443b6dc83b9e4bb",
+                            "material_lut": "a813a1643a6bebb0",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "fe98ed69982d30b3": {
+            "name": "Unknown Helmet",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "10683583799272006843",
+                            "unit_id_hex": "9443b6dc83b9e4bb",
+                            "material_lut": "097a2da739657b86",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "9cfd4019e0902fa8": {
+            "name": "CW-36 Winter Warrior",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "7341024049703618466",
+                            "unit_id_hex": "65e08e7a922f07a2",
+                            "material_lut": "2f6bf4f9f826aab2",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "heavy": {
+        "13f9269d08e52cf2": {
+            "name": "FS-55 Devastator",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "230434125355632415",
+                            "unit_id_hex": "0332aa9db9f3471f",
+                            "material_lut": "d88365da6f38c0f3",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "94b8a07a98780017": {
+            "name": "RE-824 Bearer of the Standard",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "6984202569693032508",
+                            "unit_id_hex": "60ecdf3bb5ec703c",
+                            "material_lut": "e3edfd7cdde316a5",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "3e345b62ed9e3f46": {
+            "name": "BP-77 Grand Juror",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "16058210596544271905",
+                            "unit_id_hex": "deda39751f6f5621",
+                            "material_lut": "9dcf5fc4189d0f6f",
+                            "pattern_lut": "0000000000000000"
+                        }
+                    ]
+                }
+            }
+        },
+        "c0b7d29585edde5a": {
+            "name": "CE-101 Guerilla Gorilla",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "8648711675149544067",
+                            "unit_id_hex": "780665721a0fea83",
+                            "material_lut": "6ede98d6c89e432a",
+                            "pattern_lut": "3ee9b86790283f9a"
+                        }
+                    ]
+                }
+            }
+        },
+        "71aa8c9bf9a0aef0": {
+            "name": "I-44 Salamander",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "18398362631942419217",
+                            "unit_id_hex": "ff541d55c5bfb311",
+                            "material_lut": "b7e2f33419d8d1de",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "1cd676e91f90d21d": {
+            "name": "KDM-500 Outrider",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "3121132973962917097",
+                            "unit_id_hex": "2b507de741d174e9",
+                            "material_lut": "ccd642bc4ed34823",
+                            "pattern_lut": "0000000000000000"
+                        }
+                    ]
+                }
+            }
+        },
+        "51a7562176a8ac19": {
+            "name": "CPR-80 Bulwark",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "15628900206856435498",
+                            "unit_id_hex": "d8e501eec3b4f72a",
+                            "material_lut": "962a946e964ebc40",
+                            "pattern_lut": "0000000000000000"
+                        }
+                    ]
+                }
+            }
+        },
+        "a2f4121316ccdffc": {
+            "name": "IE-12 Righteous",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "4846801377118760762",
+                            "unit_id_hex": "43434c2c4c09af3a",
+                            "material_lut": "2f14f02551a3a9de",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "a6065ffb410d5e1c": {
+            "name": "GS-66 Lawmaker",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "17551185999791963403",
+                            "unit_id_hex": "f39256ad3868bd0b",
+                            "material_lut": "7db11003f20e142e",
+                            "pattern_lut": "cf0cc31b981786c9"
+                        }
+                    ]
+                }
+            }
+        },
+        "9852e5e0b70a7441": {
+            "name": "DS-42 Federation's Blade",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "6726464881973151493",
+                            "unit_id_hex": "5d59342bfc264705",
+                            "material_lut": "a29559e4495622a8",
+                            "pattern_lut": "0000000000000000"
+                        }
+                    ]
+                }
+            }
+        },
+        "dbfd326577ba126f": {
+            "name": "DS-191 Scorpion",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "12553218768796819248",
+                            "unit_id_hex": "ae35fdf5dde69f30",
+                            "material_lut": "3dc6eb81e088e30a",
+                            "pattern_lut": "0000000000000000"
+                        }
+                    ]
+                }
+            }
+        },
+        "afecffb25e09988d": {
+            "name": "RS-40 Beast of Prey",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "146597885254571637",
+                            "unit_id_hex": "0208d1fffb6c1675",
+                            "material_lut": "984bbee84065275f",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "a72abfe9616771df": {
+            "name": "SA-8 Ram",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "6020974683820538325",
+                            "unit_id_hex": "538ecc930ebe39d5",
+                            "material_lut": "56513001a2dbbd32",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "0c7ecd8156d49fe9": {
+            "name": "PH-202 Twigsnapper",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "5574513890160481015",
+                            "unit_id_hex": "4d5ca6d91a7f12f7",
+                            "material_lut": "ef5a443edcb40f0a",
+                            "pattern_lut": "11ed9b2cf8e7b61f"
+                        }
+                    ]
+                }
+            }
+        },
+        "a2999407862595df": {
+            "name": "O-3 Free Spirit",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "9944632787246190059",
+                            "unit_id_hex": "8a026ed4c1830deb",
+                            "material_lut": "2730ba3d79a6ac6f",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        },
+        "5e40404d846b2b00": {
+            "name": "O-2 Heavy Operator",
+            "any_shared": {
+                "helmet": {
+                    "armor": [
+                        {
+                            "unit_id_dec": "17631317308600054692",
+                            "unit_id_hex": "f4af05ad6d4d73a4",
+                            "material_lut": "c322982b5cd39792",
+                            "pattern_lut": "f18dfbb5346732c1"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
